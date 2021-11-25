@@ -14,11 +14,10 @@ func main() {
 		_, _ = fmt.Fprintf(os.Stderr, "%s\n", err)
 		os.Exit(1)
 	}
-
 }
 
 func run() error {
-	port := os.Getenv("PORT")
+	//port := os.Getenv("PORT")
 
 	srv := newServer()
 	srv.store = &dbStore{}
@@ -29,7 +28,7 @@ func run() error {
 
 	http.HandleFunc("/", srv.serveHttp)
 	log.Printf("Serving HTTP on port 9000")
-	err = http.ListenAndServe(port, nil)
+	err = http.ListenAndServe(":9000", nil)
 	if err != nil {
 		return err
 	}

@@ -29,6 +29,11 @@ func (s *server) serveHttp(w http.ResponseWriter, r *http.Request) {
 func (s *server) respond(w http.ResponseWriter, _ *http.Request, data interface{}, status int) {
 	w.Header().Add("Content-Type", "application/json")
 	w.WriteHeader(status)
+	/*b,err := json.MarshalIndent(data, "", "  ")
+	if err != nil {
+		log.Fatal(err)
+	}
+	w.Write(b)*/
 
 	if data == nil {
 		return

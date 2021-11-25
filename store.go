@@ -30,7 +30,7 @@ var schema = `CREATE TABLE IF NOT EXISTS movie
 )`
 
 func (store *dbStore) Open() error {
-	db, err := sqlx.Connect("mysql", "root:root@/goflix")
+	db, err := sqlx.Connect("mysql", "root:@/goflix")
 	if err != nil {
 		return err
 	}
