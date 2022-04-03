@@ -1,1 +1,1 @@
-//lol
+> This project is a work around to understand this architecture.
