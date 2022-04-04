@@ -1,1 +1,1 @@
-> This project is a work around to understand this architecture.
+> This project is a work around to understand this architecture. life.
